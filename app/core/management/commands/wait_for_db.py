@@ -9,6 +9,7 @@ class Command(BaseCommand):
     """django command to pause execution until db is ready"""
 
     def handle(self, *args, **options):
+        """handle the command"""
         self.stdout.write('Waiting for database...')
         db_conn = None
         while not db_conn:
